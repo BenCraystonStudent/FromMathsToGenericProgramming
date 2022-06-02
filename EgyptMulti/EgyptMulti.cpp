@@ -27,12 +27,14 @@
         //uses recursion
     }
 
-    int main() 
-    {
-        int x = multiply0(4, 5);
-        std::cout << x << std::endl;
-        return 0;
-    }
+//    int main()
+//    {
+//        int x = multiply0(4, 5);
+//        std::cout << x << std::endl;
+//        return 0;
+//    }
+
+    
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
