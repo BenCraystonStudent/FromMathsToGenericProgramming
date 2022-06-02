@@ -91,4 +91,19 @@ public: int MultiplyBy25(int a)
 	return (c + c) + b;
 };
 
+public: int MultiplyAccumulator1(int r, int n, int a)
+{
+	if (n == 1)
+	{
+		return r + a;
+	}
+	if (odd(n))
+	{
+		return MultiplyAccumulator1(r + a, half(n), a + a);
+	}
+	else {
+		return MultiplyAccumulator1(r, half(n), a + a);
+	}
+};
+
 };
