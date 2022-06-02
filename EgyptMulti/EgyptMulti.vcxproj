@@ -140,8 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EgyptMulti.cpp" />
-    <ClCompile Include="AhmesAlgorithm.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="AhmesAlgorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

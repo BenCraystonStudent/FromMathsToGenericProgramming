@@ -1,7 +1,5 @@
-// EgyptMulti.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include "AhmesAlgorithm.h"
 
 
     int multiply0(int n, int a)
@@ -27,12 +25,17 @@
         //uses recursion
     }
 
-//    int main()
-//    {
-//        int x = multiply0(4, 5);
-//        std::cout << x << std::endl;
-//        return 0;
-//    }
+    int main()
+    {
+        Ahmes ahmes;
+        int x = multiply0(4, 5);
+        std::cout << x << std::endl;
+        int y = ahmes.multiply_by_15(5);
+        int z = ahmes.multiplayUnknown(5);
+        std::cout << y << std::endl;
+        std::cout << z << std::endl;
+        return 0;
+    }
 
     
 

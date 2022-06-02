@@ -7,11 +7,11 @@ int multiply_by_15(int a)
 	return (c + c) + b;
 }
 
-int main()
+int multiplayUnknown(int a)
 {
-	int x = multiply_by_15(5);
-	std::cout << x << std::endl;
-	return 0;
+	int b = (a + a + a) + a;
+	int c = b + b;
+	return (c + c) + b;
 }
 
 //Uses 5 additions (better than Ahmes)
