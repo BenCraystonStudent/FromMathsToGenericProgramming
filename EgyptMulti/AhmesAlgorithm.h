@@ -77,9 +77,16 @@ public: int multiply_by_15(int a)
 //"Here we have discovered an optimal additional chain for 15."
 //"Nevertheless, Ahmes's algorithm is good enough for most purposes."
 
-public: int multiplayUnknown(int a)
+public: int MultiplyBy20(int a)
 {
-	int b = (a + a + a) + a;
+	int b = (a + a + a) + (a);
+	int c = b + b;
+	return (c + c) + b;
+};
+
+public: int MultiplyBy25(int a)
+{
+	int b = (a + a + a + a) + a;
 	int c = b + b;
 	return (c + c) + b;
 };
