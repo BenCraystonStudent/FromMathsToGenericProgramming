@@ -187,5 +187,33 @@ public: int MultiplyAccumulator3(int r, int n, int a)
 
 //"Now it is easy to convert this to an iterative program by replacing the tail recursion with a while(true) construct"
 
+public: int MultiplyAccumulator4(int r, int n, int a)
+{
+	while (true)
+	{
+		if (odd(n))
+		{
+			r = r + a;
+			if (n == 1)
+			{
+				return r;
+			}
+		}
+		n = half(n);
+		a = a + a;
+	}
+};
+
+//"With our newly optimised multiply-accumulate function, we can write a new version of multiply.
+//"Our new version will invoke our multiply-accumulate helperm function:
+
+public: int Multiply2(int n, int a)
+{
+	if (n == 1)
+	{
+		return a;
+	}
+	return MultiplyAccumulator4(a, n - 1, a);
+};
 
 };

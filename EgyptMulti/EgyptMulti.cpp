@@ -28,7 +28,7 @@
     int main()
     {
         Ahmes ahmes;
-        int x = ahmes.MultiplyAccumulator3(0, 6, 10);
+        int x = ahmes.Multiply2(6, 10);
         std::cout << x << std::endl;
         return 0;
     }
