@@ -142,4 +142,50 @@ public: int MultiplyAccumulator0(int r, int n, int a)
 //just a condensed version of the above really with emphasis on tail recursion
 //"STRICTLY TAIL RECURSIVE PROCEDURE: a procedure in which all the tail recursive calls are done
 //with the formal parameters of the procedure being the corresponding arguments."
+
+/*
+Here's a tail-recursive version of the same function:
+
+function tailrecsum(x, running_total = 0) {
+    if (x === 0) {
+        return running_total;
+    } else {
+        return tailrecsum(x - 1, running_total + x);
+    }
+}
+
+Here's the sequence of events that would occur if you called tailrecsum(5), (which would effectively be tailrecsum(5, 0), because of the default second argument).
+
+tailrecsum(5, 0)
+tailrecsum(4, 5)
+tailrecsum(3, 9)
+tailrecsum(2, 12)
+tailrecsum(1, 14)
+tailrecsum(0, 15)
+15
+
+In the tail-recursive case, with each evaluation of the recursive call, the running_total is updated.
+			
+*/
+
+public: int MultiplyAccumulator3(int r, int n, int a)
+{
+	if (odd(n))
+	{
+		r = r + a;
+		if (n == 1)
+		{
+			return r;
+		}
+	}
+	n = half(n);
+	a = a + a;
+	return MultiplyAccumulator3(r, n, a);
+};
+
+	  //this is lovely
+
+//"Now it is easy to convert this to an iterative program by replacing the tail recursion with a while(true) construct"
+
+
 };
