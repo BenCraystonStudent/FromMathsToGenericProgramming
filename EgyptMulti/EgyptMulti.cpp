@@ -28,14 +28,8 @@
     int main()
     {
         Ahmes ahmes;
-        int x = multiply0(4, 5);
+        int x = ahmes.MultiplyAccumulator0(0, 6, 10);
         std::cout << x << std::endl;
-        int y = ahmes.multiply_by_15(5);
-        int z = ahmes.MultiplyBy20(5);
-        int l = ahmes.MultiplyBy25(2);
-        std::cout << y << std::endl;
-        std::cout << z << std::endl;
-        std::cout << l << std::endl;
         return 0;
     }
 

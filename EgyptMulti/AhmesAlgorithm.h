@@ -91,7 +91,7 @@ public: int MultiplyBy25(int a)
 	return (c + c) + b;
 };
 
-public: int MultiplyAccumulator1(int r, int n, int a)
+public: int MultiplyAccumulator0(int r, int n, int a)
 {
 	if (n == 1)
 	{
@@ -99,11 +99,13 @@ public: int MultiplyAccumulator1(int r, int n, int a)
 	}
 	if (odd(n))
 	{
-		return MultiplyAccumulator1(r + a, half(n), a + a);
+		return MultiplyAccumulator0(r + a, half(n), a + a);
 	}
 	else {
-		return MultiplyAccumulator1(r, half(n), a + a);
+		return MultiplyAccumulator0(r, half(n), a + a);
 	}
 };
+
+	  //Uses multiple recursive calls, accumulating r to dictate the number of calls made
 
 };
