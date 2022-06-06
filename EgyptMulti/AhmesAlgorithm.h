@@ -103,9 +103,43 @@ public: int MultiplyAccumulator0(int r, int n, int a)
 	}
 	else {
 		return MultiplyAccumulator0(r, half(n), a + a);
-	}
+	};
 };
 
-	  //Uses multiple recursive calls, accumulating r to dictate the number of calls made
+//Uses multiple recursive calls, accumulating r to dictate the number of calls made
 
+	  public: int MultiplyAccumulator1(int r, int n, int a)
+	  {
+		  if (n == 1)
+		  {
+			  return r + a;
+		  }
+
+		  if (odd(n))
+		  {
+			  r = r + a;
+		  }
+
+		  return MultiplyAccumulator1(r, half(n), a + a);
+	  };
+
+//modifies the value of r before recursion, making the lagortihm "tail recursive" - recursion occurs ONLY
+//in the return value.
+
+	  public: int MultiplyAccumulator2(int r, int n, int a)
+	  {
+		  if (odd(n))
+		  {
+			  r = r + a;
+			  if (n == 1)
+			  {
+				  return r;
+			  }
+		  }
+		  return MultiplyAccumulator2(r, half(n), a + a);
+	  };
+//same sort of idea, n is rarely 1 and if n is even, no point checking to see if its 1
+//just a condensed version of the above really with emphasis on tail recursion
+//"STRICTLY TAIL RECURSIVE PROCEDURE: a procedure in which all the tail recursive calls are done
+//with the formal parameters of the procedure being the corresponding arguments."
 };
