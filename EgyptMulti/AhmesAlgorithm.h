@@ -216,4 +216,39 @@ public: int Multiply2(int n, int a)
 	return MultiplyAccumulator4(a, n - 1, a);
 };
 
+//does good work except when n is even as subtracting the 1 means that
+//MultiplyAccumulator4 will be called with an odd number, making extra work
+
+public: int Multiply3(int n, int a)
+{
+	while (!odd(n))
+	{
+		a = a + a;
+		n = half(n);
+	}
+	if (n == 1)
+	{
+		return a;
+	}
+	return MultiplyAccumulator4(a, n - 1, a);
+};
+
+//now we're doing an unnecessary test in MultiplyAccumulator4 for odd(n)
+//because we're calling it with an even number!
+//therefore the final version will half and double the argument before we call it
+
+public: int Multiply4(int n, int a)
+{
+	while (!odd(n))
+	{
+		a = a + a;
+		n = half(n);
+	}
+	if (n == 1)
+	{
+		return a;
+		//even(n - 1) -> n - 1 != 1
+	}
+	return MultiplyAccumulator4(a, half(n - 1), a + a);
+};
 };
